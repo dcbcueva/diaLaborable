@@ -1,42 +1,23 @@
-const inputA = document.getElementById("num1")
-const inputB = document.getElementById("num2")
-const inputR = document.getElementById("resp")
+const inputDia = document.getElementById("dia")
+const inputMes = document.getElementById("mes")
+const inputAño = document.getElementById("año")
+const inputRes = document.getElementById("dma")
 
-const buttonSuma = document.getElementById("suma")
-const buttonRest = document.getElementById("rest")
-const buttonMult = document.getElementById("mult")
-const buttonDivi = document.getElementById("divi")
+const buttonCalc = document.getElementById("calc")
 
-const suma = (a, b) => a + b
+/*
+const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const d = Date(`${b},${a},${c}`) => weekday[d.getDay()] 
+const dia = d.getDay()
+*/
+//const di = (a, b, c) => "b" + "a" + "c".getDay()
+const di = (a,b,c) => Date(`${b} ${a} ${c}`) //=> di.getDay()
 const rest = (a, b) => a - b
 const mult = (a, b) => a * b
 const divi = (a, b) => a / b
 
-const operacionSuma = () => {
-    const x = parseInt(inputA.value)
-    const y = parseInt(inputB.value)
-    inputR.value = suma(x,y)
+const operacionDia = () => {
+    inputRes.value = di(inputDia.value,inputMes.value,inputAño.value)
 }
 
-const operacionRest = () => {
-    const x = parseInt(inputA.value)
-    const y = parseInt(inputB.value)
-    inputR.value = rest(x,y)
-}
-
-const operacionMult = () => {
-    const x = parseInt(inputA.value)
-    const y = parseInt(inputB.value)
-    inputR.value = mult(x,y)
-}
-
-const operacionDivi = () => {
-    const x = parseInt(inputA.value)
-    const y = parseInt(inputB.value)
-    inputR.value = divi(x,y)
-}
-
-buttonSuma.addEventListener("click", operacionSuma)
-buttonRest.addEventListener("click", operacionRest)
-buttonMult.addEventListener("click", operacionMult)
-buttonDivi.addEventListener("click", operacionDivi)
+buttonCalc.addEventListener("click", operacionDia)
