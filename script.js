@@ -7,8 +7,8 @@ const buttonCalc = document.getElementById("calc")
 
 const dias = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sabado"];
 const diaLaborable = (diaSemana) => { 
-    if (diaSemana>=1&&diaSemana<=5) return"día laborable"
-    else return "fin de semana"
+    if (diaSemana>=1&&diaSemana<=5) return"día laborable."
+    else return "fin de semana."
 } 
 
 const dia = () => { 
